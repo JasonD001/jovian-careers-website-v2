@@ -18,18 +18,49 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center mt-4 mb-4">Jovian Careers</h1>
+        
+        <h1 class="text-center mt-4 mb-4">
+            {{company_name}} Careers
+        </h1>
+        
         <img class='img-fluid' id="banner" src="{{ url_for('static', filename='banner1.jpg') }}" alt="Jovian Careers Banner">
 
         <h2 class="text-center  mt-2 mb-4">About Jovian</h2>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Vel pharetra vel turpis nunc. Id consectetur purus ut faucibus. Quam vulputate dignissim suspendisse in est ante in nibh mauris.</p>
 
         <h2 class="text-center mt-2 mb-4">Open positions</h2>
-        <p>TODO - Show the jobs here</p>
-        
+
+        <!-- flask templating syntax for insercting dynamic data into html and css  -->
+        <!-- with this we passed the list it got converted to list  -->
+        <div>
+            {% for job in jobs %}
+            {% include 'jobitem.html'%}
+            
+            {% endfor %}
+        </div>
+
+
+     
+
+         
         <div class= "text-center">
             <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4">Copyright 2024, Jovian </p>
+            <!-- <p class="mt-4">Copyright 2024, Jovian </p> -->
+
+            <!-- Enhanced copyright section -->
+            <div class="text-center py-3 mt-4" style="background-color: #f8f9fa; border-radius: 5px;">
+                <hr class="my-3" style="width: 50%; margin: auto;">
+                <p class="mb-0" style="font-size: 0.9rem; color: #6c757d;">
+                    &copy; 2024, <a href="" class="text-decoration-none text- 
+                     primary">Jovian</a>. All rights reserved.
+                </p>
+                <small class="d-block mt-2" style="color: #adb5bd;">
+                    Designed with <span style="color: #dc3545;">&#10084;</span> by the Jovian Team
+                </small>
+            </div>
+
+
+            
         </div> 
         
         
