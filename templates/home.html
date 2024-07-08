@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Banner Start -->
-    <img class='img-fluid' id="banner" src="{{ url_for('static', filename='banner01.jpg') }}" alt="Jovian Careers Banner">
+    <div class="container-fluid p-0">
+        <img class="img-fluid" id="banner" src="{{ url_for('static', filename='banner001.jpg') }}" alt="Jovian Careers Banner">
+    </div>
     <!-- Banner End -->
 
     <title>Jovian Careers</title>
@@ -19,9 +21,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         .content-wrapper {
-            /* padding-top: 100px; 
-            padding-bottom:50px; */
+            padding-top: 100px;
         }
+
         #banner {
             width: 100%;
             height: auto;
@@ -33,39 +35,41 @@
 
 <body>
 
-    <!-- navbar section -->
-
-    {% include 'nav.html'%}
+    <!-- Navbar Section -->
+    {% include 'nav.html' %}
 
     <!-- Main Content Start -->
     <div class="container content-wrapper">
         <h1 class="text-center mt-4 mb-4">
             {{company_name}} Careers
         </h1>
-        
-        <!-- <img class='img-fluid' id="banner" src="{{ url_for('static', filename='banner1.jpg') }}" alt="Jovian Careers Banner"> -->
 
-        <!-- <h2 class="text-center mt-2 mb-4" id="about">About Jovian</h2> -->
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Vel pharetra vel turpis nunc. Id consectetur purus ut faucibus. Quam vulputate dignissim suspendisse in est ante in nibh mauris.</p>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="lead">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Vel pharetra vel turpis nunc. Id consectetur purus ut faucibus. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Vel pharetra vel turpis nunc. Id consectetur purus ut faucibus. Quam vulputate dignissim suspendisse in est ante in nibh mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Vel pharetra vel turpis nunc. Id consectetur purus ut faucibus. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Lorem ipsum dolor sit ame
+                </p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="{{ url_for('static', filename='person.jpg') }}" class="img-fluid rounded shadow-lg my-4" alt="People working">
+            </div>
+        </div>
 
         <h2 class="text-center mt-2 mb-4" id="careers">Job Openings</h2>
-
         <div>
             {% for job in jobs %}
-            {% include 'jobitem.html'%}
+                {% include 'jobitem.html' %}
             {% endfor %}
         </div>
 
         <div class="text-center" id="contact">
             <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
-        </div> 
-
-
+        </div>
+    </div>
     <!-- Main Content End -->
 
-        <!-- footer section -->
-        
-      {% include "footer.html"%}
+    <!-- Footer Section -->
+    {% include "footer.html" %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-IQsoMXYgD+Q8oIbY9B5iUJHU5GftZ0g4YfvnBjn+dcBb1w1eYfoRS+JiS0C8khPM" crossorigin="anonymous"></script>
 </body>
