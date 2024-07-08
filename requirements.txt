@@ -1,0 +1,4 @@
+Flask
+
+# this is used when we want to put falsk application to production
+gunicorn
