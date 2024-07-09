@@ -28,15 +28,19 @@
 </head>
 
 <body class="light-mode">
+    <!-- Banner Start -->
+    <img class="img-fluid" id="banner" src="{{ url_for('static', filename='banner001.jpg') }}" alt="Jovian Careers Banner">
+    <!-- Banner End -->
+
     <!-- Navbar Section -->
-    {% include 'nav.html'%}
+    {% include 'nav.html' %}
 
     <!-- Main Content Start -->
     <div class="container content-wrapper">
         <h1 class="text-center mt-4 mb-4">
-            {{company_name}} Careers
+            {{ company_name }} Careers
         </h1>
-        
+
         <div class="row">
             <div class="col-md-6">
                 <p class="lead">
@@ -51,7 +55,7 @@
         <h2 class="text-center mt-2 mb-4" id="careers">Job Openings</h2>
         <div>
             {% for job in jobs %}
-                {% include 'jobitem.html'%}
+                {% include 'jobitem.html' %}
             {% endfor %}
         </div>
 
@@ -62,7 +66,7 @@
     <!-- Main Content End -->
 
     <!-- Footer Section -->
-    {% include "footer.html"%}
+    {% include 'footer.html' %}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-IQsoMXYgD+Q8oIbY9B5iUJHU5GftZ0g4YfvnBjn+dcBb1w1eYfoRS+JiS0C8khPM" crossorigin="anonymous"></script>
 </body>
