@@ -1,0 +1,73 @@
+<!-- Light/Dark Mode Toggle Button in Navbar -->
+<!-- <li class="nav-item">
+    <a id="theme-toggle" class="nav-link" href="javascript:void(0);">
+        <i id="theme-icon" class="fas fa-moon"></i>
+    </a>
+</li>
+
+<style>
+    body.light-mode {
+        background-color: #fff;
+        color: #000;
+    }
+
+    body.dark-mode {
+        background-color: #121212;
+        color: #fff;
+    }
+</style>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    });
+</script>
+ -->
+<!-- Light/Dark Mode Toggle Button in Navbar -->
+<a id="theme-toggle" class="nav-link" href="javascript:void(0);">
+    <i id="theme-icon" class="fas fa-moon"></i>
+</a>
+
+<style>
+    body.light-mode {
+        background-color: #fff;
+        color: #000;
+    }
+
+    body.dark-mode {
+        background-color: #121212;
+        color: #fff;
+    }
+</style>
+
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    });
+</script>
