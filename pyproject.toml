@@ -11,6 +11,8 @@ python = "^3.10"
 flask = "^3.0.3"
 sqlalchemy = "^2.0.31"
 pymysql = "^1.1.1"
+upgraded-engineer = "^0.2.1"
+jobspy = "^0.29.0"
 
 
 [build-system]
