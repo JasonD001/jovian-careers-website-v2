@@ -1,10 +1,14 @@
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Text
+import os
 
 # Define your database connection string and engine with future mode
 # unable to store data scretly deployment failed again and again  my_secret = os.environ['DB_CONNECTION_STRING']
 
-db_connection_string = "mysql+pymysql://3fhxh8nve6iyVbK.root:SCVEFrEbCG135vaO@gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/test?charset=utf8mb4"
-engine = create_engine(db_connection_string,
+my_secret = os.environ['DB_CONNECTION_STRING']
+#db_connection_string = "mysql+pymysql://3fhxh8nve6iyVbK.root:SCVEFrEbCG135vaO@gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/test?charset=utf8mb4"
+
+
+engine = create_engine(my_secret,
                        connect_args={"ssl": {
                            "ssl_ca": "isrgrootx1.pem"
                        }},
