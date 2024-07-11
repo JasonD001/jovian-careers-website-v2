@@ -1,10 +1,16 @@
 language = 'python3'
 run = "flask run --host=0.0.0.0"
-modules = ["python-3.10"]
+modules = ["web", "python-3.10"]
 
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[deployment]
+run = ["sh", "-c", "flask run --host=0.0.0.0"]
+
+[nix]
+channel = "stable-24_05"
 
 
 # [nix]
