@@ -32,8 +32,11 @@ from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, 
 import os
 
 # Define your database connection string and engine with future mode
-db_connection_string = os.environ.get('DB_CONNECTION_STRING', 'default_connection_string_here')
-engine = create_engine(db_connection_string,
+my_secret = os.environ['DB_CONNECTION_STRING']
+
+# db_connection_string = os.environ.get['DB_CONNECTION_STRING']
+
+engine = create_engine(my_secret,
                        connect_args={"ssl": {
                            "ssl_ca": "isrgrootx1.pem"
                        }},
