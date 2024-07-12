@@ -1,11 +1,36 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+      body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+
+      .content {
+          flex: 1;
+      }
+
+      footer {
+          flex-shrink: 0;
+      }
+  </style>
+  
+  {% include 'bootstrap.html' %}
+  
+
   <title>{{job.title}}</title>
+  
 </head>
 
 <body>
+  {% include 'nav.html'%}
 
   <h3>Title</h3>
   <p>{{job.title}}</p>
@@ -22,6 +47,65 @@
   <h3>Requirements</h3>
   <p>{{job.requirements}}</p>
 
+  {% include "footer.html"%}
+ 
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ job.title }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: auto;
+            background-image: url('/static/footer_img.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #343a40;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h3>Title</h3>
+        <p>{{ job.title }}</p>
+
+        <h3>Location</h3>
+        <p>{{ job.location }}</p>
+
+        <h3>Salary</h3>
+        <p>{{ job.currency }}{{ job.salary }}</p>
+
+        <h3>Responsibilities</h3>
+        <p>{{ job.responsibilities }}</p>
+
+        <h3>Requirements</h3>
+        <p>{{ job.requirements }}</p>
+    </div>
+
+    {% include "footer.html" %}
 </body>
 
 </html>
+
+
