@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light background color */
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 800px; /* Increased max-width for more space */
+            margin: auto;
+            background-color: #fff; /* White background */
+            padding: 30px;
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Light shadow for depth */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .submit-btn {
+            background-color: #007bff; /* Blue submit button */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Job Application Form</h2>
+        <form action="/submit_application" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="linkedin">LinkedIn URL:</label>
+                <input type="url" id="linkedin" name="linkedin" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="experience">Previous Experience:</label>
+                <textarea id="experience" name="experience" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" class="form-control" rows="2" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="work_experience">Work Experience:</label>
+                <textarea id="work_experience" name="work_experience" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+        </form>
+    </div>
+</body>
+
+</html>

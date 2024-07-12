@@ -1,63 +1,4 @@
-        <!-- flask templating syntax for insercting dynamic data into html and css  -->
-        <!-- with this we passed the list it got converted to list  -->
-        <!-- <div>
-            {% for job in jobs %}
-            <div class="mb-4">
-                <h4 class="mb-1" style="color:rgb(120,120,120)">
-                    {{ job['title'] }}
-                </h4>
-                
-                <div>
-                    <b>Location:</b> {{ job['location'] }}
-                </div>
-
-                <div>
-                    <b>Salary:</b> {{ job['salary'] }}
-                </div>
-
-                
-            </div>
-            {% endfor %}
-        </div>
- -->
-
-<!-- <div class="card mb-4">
-    <div class="card-body d-flex justify-content-between align-items-start">
-        <div>
-            <h4 class="card-title mb-1" style="color:rgb(120, 120, 120);">{{ job['title'] }}</h4>
-            <div class="card-text">
-                <p><strong>Location:</strong> {{ job['location'] }}</p>
-                {% if 'salary' in job %}
-                    <p><strong>Salary:</strong> {{ job['salary'] }}</p>
-                {% endif %}
-            </div>
-        </div>
-        <div class="ml-auto">
-            <button type="button" class="btn btn-outline-primary">Apply</button>
-        </div>
-    </div>
-</div>
- -->
-
-
-<!-- <div class="card mb-4">
-    <div class="card-body d-flex justify-content-between align-items-start">
-        <div>
-            <h4 class="card-title mb-1" style="color:rgb(120, 120, 120);">{{ job['title'] }}</h4>
-            <div class="card-text">
-                <p><strong>Location:</strong> {{ job['location'] }}</p>
-                {% if 'salary' in job %}
-                    <p><strong>Salary:</strong> {{ job['salary'] }}</p>
-                {% endif %}
-            </div>
-        </div>
-        <div class="ml-auto">
-            <a href="mailto:jovaian@gmail.com?subject={{ job['title']|urlencode }}" class="btn btn-outline-primary">Apply</a>
-            
-        </div>
-    </div>
-</div>
- -->
+<!-- 
 
  <div class="card mb-4">
      <div class="card-body d-flex justify-content-between align-items-start">
@@ -71,8 +12,7 @@
              </div>
          </div>
          <div class="ml-auto">
-            <!-- Mailto link opens up email with a predefined tempalte -->
-             <!-- <a href="mailto:jovaian@gmail?subject=Application%20for%20{{job['title']}}&body=My%20name%3A%20%3Cyour%20name%3E%0D%0AMy%20Resume%20%3A%20%3Cpdf%20or%20link%3E%0D%0AMy%20LinkedIn%20profile%20%3A%20%3Clinkedin%20like%3E" class="btn btn-outline-primary">Apply</a> -->
+        
              
              <a class="btn btn-outline-primary" href="/job/{{job['id']}}">Apply</a>
 
@@ -81,3 +21,26 @@
      </div>
  </div>
 
+
+ -->
+<div class="card mb-3">
+    <div class="card-body d-flex justify-content-between align-items-center">
+        <div style="flex: 1;">
+            <h5 class="card-title mb-1">{{ job['title'] }}</h5>
+            <p class="card-text mb-1"><strong>Location:</strong> {{ job['location'] }}</p>
+            {% if 'salary' in job %}
+            <p class="card-text mb-1"><strong>Salary:</strong> {{ job['salary'] }}</p>
+            {% endif %}
+        </div>
+        <div class="ml-auto">
+            <a href="/job/{{job['id']}}" class="btn btn-sm btn-outline-primary">Apply</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Mailto link opens up email with a predefined tempalte -->
+ <!-- <a href="mailto:jovaian@gmail?subject=Application%20for%20{{job['title']}}&body=My%20name%3A%20%3Cyour%20name%3E%0D%0AMy%20Resume%20%3A%20%3Cpdf%20or%20link%3E%0D%0AMy%20LinkedIn%20profile%20%3A%20%3Clinkedin%20like%3E" class="btn btn-outline-primary">Apply</a> -->

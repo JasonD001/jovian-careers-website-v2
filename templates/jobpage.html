@@ -12,21 +12,28 @@
             display: flex;
             flex-direction: column;
             font-family: Arial, sans-serif;
-            background-color: #f8f9fa; /* Light background color */
+            background-color: #f8f9fa;
+            /* Light background color */
         }
 
         .content {
             flex: 1;
             padding: 20px;
-            margin-top: 20px; /* Added margin to create space between content and navbar */
+            margin-top: 20px;
+            /* Added margin to create space between content and navbar */
         }
 
         .section-container {
-            background-color: #fff; /* White background */
-            border-radius: 10px; /* Rounded corners */
-            padding: 20px; /* Padding inside the container */
-            margin-bottom: 20px; /* Margin bottom for spacing */
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Light shadow for depth */
+            background-color: #fff;
+            /* White background */
+            border-radius: 10px;
+            /* Rounded corners */
+            padding: 20px;
+            /* Padding inside the container */
+            margin-bottom: 20px;
+            /* Margin bottom for spacing */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Light shadow for depth */
         }
 
         footer {
@@ -39,18 +46,24 @@
             text-align: center;
         }
 
-        h3, h4 {
-            color: #007bff; /* Blue heading color */
-            margin-top: 20px; /* Margin for top spacing of each section */
+        h3,
+        h4 {
+            color: #007bff;
+            /* Blue heading color */
+            margin-top: 20px;
+            /* Margin for top spacing of each section */
         }
 
         p {
-            color: #495057; /* Darker text color */
-            line-height: 1.6; /* Increased line height for better readability */
+            color: #495057;
+            /* Darker text color */
+            line-height: 1.6;
+            /* Increased line height for better readability */
         }
 
         .apply-btn {
-            background-color: #007bff; /* Blue apply button */
+            background-color: #007bff;
+            /* Blue apply button */
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
@@ -60,7 +73,8 @@
         }
 
         .apply-btn:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
+            /* Darker blue on hover */
             color: white;
         }
     </style>
@@ -98,10 +112,13 @@
                 <li>{{ line }}</li>
                 {% endfor %}
             </ul>
-
-        <div class="text-center"> <!-- Center align content -->
-            <a href="#" class="apply-btn">Apply Now</a>
+            
+ 
         </div>
+    </div>
+    <div>
+        {% include "application_form.html" %}
+    </div>
 
     <!-- Footer Section -->
     {% include "footer.html" %}
