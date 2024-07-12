@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Job Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Light background color */
+        }
+
+        .hero {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .banner-img {
+            max-width: 80%; /* Adjust maximum width of the image */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="{{ url_for('static', filename='banner001.jpg') }}" alt="Job Banner Image" class="img-fluid banner-img">
+    </div>
+</body>
+
+</html>

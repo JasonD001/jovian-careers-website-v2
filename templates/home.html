@@ -3,12 +3,12 @@
 
 <head>
     {% include 'bootstrap.html' %}
-
     <title>Jovian Careers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('{{ url_for('static', filename='background.jpg') }}');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -18,11 +18,13 @@
         }
 
         .content-wrapper {
-            padding: 60px 20px; /* Add top padding to create space from the navbar */
-            margin-top: 70px; /* Ensure there's enough space from the navbar */
+            padding: 60px 20px;
+            margin-top: 70px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            box-sizing: border-box;
         }
 
         #banner {
@@ -58,6 +60,48 @@
         .text-shadow {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
+        .hero {
+            background: url('{{ url_for('static', filename='banner001.jpg') }}') no-repeat center center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            position: relative;
+            z-index: 1;
+            color: #f8f9fa; /* Make the text color lighter */
+        }
+
+        .hero a {
+            background-color: #0275d8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 
@@ -65,8 +109,11 @@
     <!-- Navbar Section -->
     {% include 'nav.html' %}
 
+    <!-- Hero Section -->
+    {% include 'hero.html' %}
+    
     <!-- Main Content Start -->
-    <div class="container content-wrapper">
+    <div class="content-wrapper">
         <h1 class="text-center mt-4 mb-4 text-shadow">
             {{ company_name }} Careers
         </h1>
@@ -77,13 +124,12 @@
                     At Jovian, we are passionate about empowering individuals and organizations to unlock their potential through the power of data science and machine learning. Our team is dedicated to providing top-notch education, cutting-edge tools, and a supportive community that fosters growth and innovation. Whether you're a seasoned professional or just starting your journey in the data field, Jovian offers an inclusive environment where you can learn, collaborate, and thrive. Join us and be a part of a transformative journey that is shaping the future of technology and data-driven decision-making.
                 </p>
             </div>
-
             <div class="col-md-6">
                 <img src="{{ url_for('static', filename='person.jpg') }}" class="img-fluid rounded shadow-lg my-4" alt="People working">
             </div>
         </div>
 
-        <h2 class="section-title" id="careers">Job Openings</h2>
+        <h2 class="text-center section-title" id="careers">Job Openings</h2>
         <div>
             {% for job in jobs %}
                 {% include 'jobitem.html' %}
@@ -99,7 +145,7 @@
     <!-- Footer Section -->
     {% include "footer.html" %}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-IQsoMXYgD+Q8oIbY9B5iUJHU5GftZ0g4YfvnBjn+dcBb1w1eYfoRS+JiS0C8khPM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
