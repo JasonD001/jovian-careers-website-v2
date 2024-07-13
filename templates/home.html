@@ -90,7 +90,8 @@
             font-size: 3rem;
             position: relative;
             z-index: 1;
-            color: #f8f9fa; /* Make the text color lighter */
+            color: #f8f9fa;
+            /* Make the text color lighter */
         }
 
         .hero a {
@@ -111,7 +112,7 @@
 
     <!-- Hero Section -->
     {% include 'hero.html' %}
-    
+
     <!-- Main Content Start -->
     <div class="content-wrapper">
         <h1 class="text-center mt-4 mb-4 text-shadow">
@@ -121,23 +122,31 @@
         <div class="row">
             <div class="col-md-6">
                 <p class="lead">
-                    At Jovian, we are passionate about empowering individuals and organizations to unlock their potential through the power of data science and machine learning. Our team is dedicated to providing top-notch education, cutting-edge tools, and a supportive community that fosters growth and innovation. Whether you're a seasoned professional or just starting your journey in the data field, Jovian offers an inclusive environment where you can learn, collaborate, and thrive. Join us and be a part of a transformative journey that is shaping the future of technology and data-driven decision-making.
+                    At Jovian, we are passionate about empowering individuals and organizations to unlock their
+                    potential through the power of data science and machine learning. Our team is dedicated to providing
+                    top-notch education, cutting-edge tools, and a supportive community that fosters growth and
+                    innovation. Whether you're a seasoned professional or just starting your journey in the data field,
+                    Jovian offers an inclusive environment where you can learn, collaborate, and thrive. Join us and be
+                    a part of a transformative journey that is shaping the future of technology and data-driven
+                    decision-making.
                 </p>
             </div>
             <div class="col-md-6">
-                <img src="{{ url_for('static', filename='person.jpg') }}" class="img-fluid rounded shadow-lg my-4" alt="People working">
+                <img src="{{ url_for('static', filename='person.jpg') }}" class="img-fluid rounded shadow-lg my-4"
+                    alt="People working">
             </div>
         </div>
 
         <h2 class="text-center section-title" id="careers">Job Openings</h2>
         <div>
             {% for job in jobs %}
-                {% include 'jobitem.html' %}
+            {% include 'jobitem.html' %}
             {% endfor %}
         </div>
 
         <div class="text-center" id="contact">
-            <a href="mailto:jovaian@gmail?subject=Question%20about%20job%20openings&body=My%20name%3A%20%3Cyour%20name%3E%0D%0A%0D%0AMy%20question%3A%20%3Center%20your%20question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
+            <a href="mailto:jovaian@gmail?subject=Question%20about%20job%20openings&body=My%20name%3A%20%3Cyour%20name%3E%0D%0A%0D%0AMy%20question%3A%20%3Center%20your%20question%20here%3E"
+                class="btn btn-primary btn-lg">Contact Us</a>
         </div>
     </div>
     <!-- Main Content End -->
