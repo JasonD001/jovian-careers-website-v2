@@ -6,6 +6,10 @@ modules = ["web", "python-3.10"]
 localPort = 5000
 externalPort = 80
 
+[[ports]]
+localPort = 5001
+externalPort = 3000
+
 [deployment]
 run = ["sh", "-c", "flask run --host=0.0.0.0"]
 
